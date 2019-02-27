@@ -1,0 +1,15 @@
+version: "3.1"
+services:
+
+    calibre:
+      image: linuxserver/calibre-web
+      container_name: calibrewebls
+      ports:
+        - "8083:8083"
+      volumes:
+        - "./books:/books"
+        - "./config:/config"
+      environment:
+        - PGID= 201827
+        - PUID= 201827
+      
